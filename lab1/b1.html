@@ -1,0 +1,24 @@
+Số 1: <input type="text" id="so1">
+<br>
+Số 2: <input type="text" id="so2">
+<br>
+<button onclick="demso()">Run</button>
+<div id="ketqua"></div>
+<script>
+    // b1. tạo sự kiện cho thẻ button (click)
+    function demso(){
+        // b2. lấy giá trị đang có của thẻ #so1
+        let theSo1 = document.querySelector('#so1');
+        let so1 = parseInt(theSo1.value) ;
+        // lấy giá trị của thẻ #so2
+        let theSo2 = document.querySelector('#so2');
+        let so2 = parseInt(theSo2.value);
+        let content = "";
+        // b3. chạy vòng lặp từ so1 đến so2
+        for(let i = so1; i <= so2; i++){
+            content += i + "<br>";
+        }
+        let theketqua = document.querySelector('#ketqua');
+        theketqua.innerHTML = content;
+    }
+</script>

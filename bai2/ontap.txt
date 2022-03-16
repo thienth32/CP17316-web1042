@@ -1,0 +1,11 @@
+1. các cú pháp để tạo ra chuỗi: '', "", ``
+2. lấy số lượng ký tự trong chuỗi: str.length
+3. tìm 1 chuỗi A có tồn tại trong chuỗi str hay không
+str.includes(A) => true/false
+str.indexOf(A) => số index/-1
+4. loại bỏ khoảng trắng ở 2 đầu của chuỗi
+str.trim()
+5. lấy 1 đoạn trong chuỗi str dựa vào số index
+str.substring(start, end)
+6. chuyển từ chuỗi sang mảng dựa vào dấu cách
+str.split(" ");

@@ -1,0 +1,58 @@
+<div id="target"></div>
+<script>
+    // mảng: kiểu dữ liệu, là tập hợp các giá trị (phần tử) - các
+    // phần tử không nhất thiết phải có cùng kiểu dữ liệu, các phần
+    // tử đc xác định bằng số index
+    // javascript array reference
+    let arr = [3,4,5,6,10, 9, 14];
+    // .length => số lượng phần tử trong mảng
+    // pop() => loại bỏ phần tử cuối cùng => trả về giá trị của ptu bị loại bỏ
+    // push() => add thêm 1 phần tử vào cuối mảng
+    // shift() => loại bỏ phần tử đầu tiên => trả về giá trị của ptu bị loại bỏ
+    // unshift() => add thêm 1 phần tử vào đầu mảng
+    // splice() => dựa vào index chèn thêm phần tử vào vị trí index, 
+    // có thể xóa bớt 1 số các phần tử khỏi mảng
+    // delete => loại bỏ 1 phần tử dựa vào index, biến ptu trở thành undefined
+    // delete arr[3];
+    // delete arr[5];
+    console.log(arr);
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i] != undefined){
+    //         console.log(arr[i]);
+    //     }
+    // }
+
+    // filter() => dựa trên mảng gốc để lọc ra các phần tử mà thỏa mãn điều kiện return = true
+    // map() => tạo ra 1 mảng mới mà có các phần tử được biến đổi dựa trên mảng gốc
+    // forEach() => tạo 1 vòng lặp chạy qua các phần tử của mảng (không quan tâm đến index)
+    // let arr2 = arr.map(function(value){
+    //     let content = `<p>${value}</p>`;
+    //     return content;
+    // });
+    // document.querySelector('#target').innerHTML = arr2.join('');
+    // arr.forEach(function(value, index){
+    //     arr2.push(Math.pow(value, 2));
+    // });
+    // let arr2 = arr.filter(function(value){
+    //     return value != 3;
+    // });
+    // console.log(arr2);
+
+    // includes()
+    // indexOf()
+    // lastIndexOf()
+    // find()
+    
+    // join() => chuyển mảng thành chuỗi 
+    // và các phần tử sẽ đc nối với nhau dựa trên ký tự là tham số của hàm join
+    // reverse() => đảo ngược mảng
+    // sort() => sắp xếp các phần tử trong mảng, sắp xếp chuỗi
+    // sắp xếp theo phần tử là số
+    let arr2 = arr.sort(function (a, b){
+        return b-a;
+    });
+
+    console.log(arr2);
+    
+    
+</script>

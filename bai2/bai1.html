@@ -1,0 +1,25 @@
+Chuỗi gốc: <input type="text" id="goc">
+<br>
+chuỗi cần tìm: <input type="text" id="canTim">
+<br>
+chuỗi thay thế: <input type="text" id="thayThe">
+<br>
+<button onclick="thuchien()">Thực hiện</button>
+<br>
+<div id="ketqua"></div>
+<script>
+    function thuchien(){
+        let chuoiGoc = document.querySelector('#goc').value;
+        let chuoicanTim = document.querySelector('#canTim').value;
+        let chuoithayThe = document.querySelector('#thayThe').value;
+        let ketqua = document.querySelector('#ketqua');
+        // yêu cầu tìm và thay thế chuỗi đầu tiên tìm đc trong chuỗi gốc
+        // và in ra kết quả ở thẻ #ketqua
+        // let chuoiKetQua = chuoiGoc.replaceAll(chuoicanTim, chuoithayThe);
+        // ketqua.innerHTML = chuoiKetQua;
+        while(chuoiGoc.indexOf(chuoicanTim) != -1){
+            chuoiGoc = chuoiGoc.replace(chuoicanTim, chuoithayThe);
+        }
+        ketqua.innerHTML = chuoiGoc;
+    }
+</script>
