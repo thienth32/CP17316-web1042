@@ -1,0 +1,56 @@
+<script>
+    // tạo 1 mảng gồm 100 phần tử random trong khoảng 0 => 200
+    // YC1: lọc lại các phần tử chia hết cho 3 & 5 trong mảng
+    // hiển thị bằng console.log()
+    // YC2: lọc lại các phần tử là số nguyên tố trong mảng
+    // hiển thị bằng console.log()
+    let arr = [];
+    while(arr.length < 100){
+        let randomNumber = Math.floor(Math.random() * 201);
+        arr.push(randomNumber);
+    }
+
+    // let arr2 = arr.filter(function(item){
+    //     return item%3==0 && item%5==0;
+    // });
+
+    // let arr2 = [];
+    // for (const item of arr) {
+    //     if(item%3==0 && item%5==0){
+    //         arr2.push(item);
+    //     }
+    // }
+    // console.log(arr, arr2);
+
+
+    let arr3 = arr.filter(function(value){
+        let dk = true;
+        if(value > 2 ){
+            for(let i = 2; i < value; i++) {
+                if(value % i == 0) {
+                    dk = false;       
+                    break;
+                }
+            }
+        }else{
+            dk = false;
+        }
+        return dk;
+    });
+
+    // for(let value of arr) {
+    //     let dk = true;
+    //     if(value > 2){
+    //         for(let i = 2; i < value; i++) {
+    //             if(value % i == 0) {
+    //                 dk = false;       
+    //                 break;
+    //             }
+    //         }
+    //     }
+    //     if(dk) {
+    //         arr3.push(value);
+    //     }
+    // }
+    console.log(arr, arr3);
+</script>

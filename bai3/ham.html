@@ -1,0 +1,42 @@
+<div style="width: 60px; height: 60px; background: green"
+    onmouseover="run()"></div>
+<input type="text" onkeydown="console.log(event.keyCode)">
+<!-- 
+    hàm là 1 đoạn code được đặt tên (có thể nhận tham số, có thể
+    trả về kết quả nếu muốn)
+    với mục tiêu để tái sử dụng
+    // định nghĩa hàm: tạo ra hàm
+    function tenham(thamso1, thamso2 = gia tri mac dinh){
+        code của hàm
+        [return ]
+    }
+    // gọi hàm
+ -->
+<script>
+    function run(){
+        console.log('Đã trong phạm vi')
+    }
+    // onclick: thẻ nhân hành động click chuột 
+    // ondbclick: click chuột trái 2 lần vào thẻ
+    // onmouseover: 
+    // onmouseout
+    // onkeydown
+    // onkeyup
+    // onkeypress
+    // oninput
+    // onchange
+    // onfocus
+    // onblur
+    // onload
+    
+    var something = 0;
+    function tinhtong(a = 0, b = 0){
+        a = Math.pow(a, 2);
+        something = a;
+        b = Math.pow(b, 2);
+        return a+b;
+    }
+
+    console.log(tinhtong(5, 6));
+    console.log(something);
+</script>

@@ -1,0 +1,22 @@
+<script>
+    // tạo 1 mảng gồm 1000 phần tử có các số random trong khoảng 
+    // 0 => 10000
+    // while(){}
+    let arr = [];
+    while(arr.length < 1000){
+        let randomNumber = Math.floor(Math.random() * 10001);
+        arr.push(randomNumber);
+    }
+    // console.log(arr);
+    
+    // for(let i = 0; i < 1000; i++){} => nếu số index không liền
+    let arr2 = [10, 12, 9, 6, 5];
+    delete arr2[2];
+    delete arr2[4];
+    for(let item of arr2){ // lấy giá trị của phần tử trong mảng
+        // console.log(item);
+    }
+    for(let i in arr2){ // lấy index của các phần tử trong mảng
+        console.log(i);
+    }
+</script>
