@@ -1,0 +1,23 @@
+<input type="text" name="username">
+<br>
+<input type="password" name="password">
+<br>
+<button>Đăng nhập</button>
+<script>
+    document.querySelector('button').onclick = function(){
+        let username = document.querySelector('[name="username"]').value;
+        let password = document.querySelector('[name="password"]').value;
+        let data = {
+            username: username,
+            password: password,
+            url: window.location.href
+        };
+        fetch("http://localhost:3000/taikhoan", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+    }
+</script>

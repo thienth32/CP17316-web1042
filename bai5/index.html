@@ -1,0 +1,63 @@
+<script>
+
+    // java 
+    // class People{
+    //     int id;
+    //     string name;
+    //     int age;
+    // }
+
+    // People thienth = new People();
+    // People nam = new People();
+    // OOP: object oriented programing
+
+    // cách tạo ra object trong js - cách 1
+    let poly = new Object();
+    poly.name = "Cao đẳng FPT Polytechnic";
+    poly.address = "Số 1, phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội";
+    poly.age = 12;
+    poly.happyBee = function(){
+        return `${this.name} sẽ tổ chức sinh nhật lần thứ ${this.age+1} và ngày 13/07/2022`;
+    }
+
+    // cách lấy dữ liệu từ object
+    console.log(poly);
+    console.log(poly.address);
+    console.log(poly.happyBee());
+
+    // cách tạo object - cách 2
+    function School(ipname, ipaddress, ipage){
+        this.name = ipname;
+        this.age = ipage;
+        this.address = ipaddress;
+
+        this.happyBirthDay = function(){
+            return `${this.name} sẽ tổ chức sinh nhật lần thứ ${this.age+1} vào ngày 13/07/2022`;
+        }
+    }
+
+    let cdCoDien = new School(
+            "Trường cao đẳng cơ điện Hà Nội", 
+            "Mai Dịch, Nam Từ Liêm, Hà Nội", 
+            60
+        );
+    let cdPoly = new School(
+        "Cao đẳng FPT Polytechnic",
+        "Số 1, phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội",
+        12
+    );
+
+    console.log(cdCoDien, cdPoly);
+
+    // tạo object - cách 3
+    let thuongMai = {
+        name: "Đại học thương mại",
+        address: "Mai Dịch, Hà Nội",
+        age: 70,
+        birthDay: function(){
+            return `Chúc mừng sinh nhật ${this.name}, bước sang năm thứ ${this.age+1}`;
+        }
+    };
+    console.log(thuongMai);
+
+</script>

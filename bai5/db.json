@@ -1,0 +1,15 @@
+{
+  "taikhoan": [
+    {
+      "username": "thienth",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "username": "thienth2",
+      "password": "1234567",
+      "url": "http://127.0.0.1:5500/bai5/test.html",
+      "id": 2
+    }
+  ]
+}
